@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkpoint 05</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="bg-info p-4 mt-3 text-light">
+            <h1 class="display-4">Cadastrar Carona</h1>
+            <h3>Cadastro de caronas solidárias</h3>
+        </div>
+        <div class="my-4">
+            <h2>Dados da viagem</h2>
+            <table id="resumo" class="table table-hover text-center">
+                <thead class="table-dark">
+                    <tr id="cabecalho">
+                        <th class="nome">Nome</th>
+                        <th class="celular">Celular</th>
+                        <th class="text">Origem da Viagem</th>
+                        <th class="text">Destino da Viagem</th>
+                        <th class="dta-carona">Data e hora da carona</th>
+                        <th class="modelo">Modelo do carro</th>
+                    </tr>
+                </thead>
+                <tbody class="historico">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="my-5 border border-1 p-4 rounded">
+            <h2 class="mt-y">Cadastrar Carona</h2>
+            <form class="dados" id="dados" method="post" action="">
+                <div class="row mb-3">
+
+                    <div class="col-md-6 my-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="ex: Lewis Hamilton"
+                            required autofocus>
+                    </div>
+
+                    <div class="col-md-6  my-3">
+                        <label for="celular" class="form-label">Celular</label>
+                        <input type="tel" class="form-control" id="celular" name="celular" placeholder="(99) 9999-9999"
+                            required>
+                    </div>
+
+                    <div class="col-md-6  my-3">
+                        <label for="origem" class="form-label">Origem da Viagem</label>
+                        <select id="origem" class="form-select" required>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Curitiba">Curitiba</option>
+                            <option value="Belo Horizonte">Belo Horizonte</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Bauru">Bauru</option>
+                            <option value="Blumenau">Blumenau</option>
+                            <option value="Florianópolis">Florianópolis</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6  my-3">
+                        <label for="destino" class="form-label">Destino da Viagem</label>
+                        <select id="destino" class="form-select" required>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Curitiba">Curitiba</option>
+                            <option value="Belo Horizonte">Belo Horizonte</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Bauru">Bauru</option>
+                            <option value="Blumenau">Blumenau</option>
+                            <option value="Florianópolis">Florianópolis</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6  my-3">
+                        <label for="data" class="form-label">Data e Hora da Carona</label>
+                        <input type="datetime-local" class="form-control" id="data" name="data" required>
+                    </div>
+
+                    <div class="col-md-6  my-3">
+                        <label for="modelo" class="form-label">Modelo do Carro</label>
+                        <input type="text" class="form-control" id="modelo" name="modelo"
+                            placeholder="ex: Honda HRV 2020" required>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="submit" class="btn btn-primary">Gravar Dados</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/Ex02.js"></script>
+</body>
+
+</html>
